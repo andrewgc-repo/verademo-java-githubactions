@@ -1,4 +1,4 @@
-name: SCA on change in dependencies definition
+name: SCA (GitHub Action) on change in dependencies definition
 
 # Controls when the workflow will run
 on:
