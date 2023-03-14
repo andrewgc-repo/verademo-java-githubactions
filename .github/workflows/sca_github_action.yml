@@ -22,8 +22,28 @@ jobs:
       - name: Run Veracode SCA
         env:
           SRCCLR_API_TOKEN: ${{ secrets.SRCCLR_API_TOKEN }}
-        uses: veracode/veracode-sca@v1.09
+        uses: veracode/veracode-sca@v2.1.6
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          create-issues: false 
-          fail-on-cvss: 1    
+          # Authorization token to query and create issues
+          github_token: ${{ github.token }}
+          # Run the SRCCLR with the `--quick` options
+          #quick: # optional, default is false
+          # Show update advisor
+          #update_advisor: # optional, default is false
+          # A git URL to work with in case the scan is not for the current repository
+          #url: # optional, default is 
+          # An attribute to instruct the action to create an issue from found vulnerability or just simple text output
+          #create-issues: # optional, default is false
+          # A path within the repository where the build definition starts
+          #path: # optional, default is .
+          # Run the SRCCLR in debug mode
+          #debug: # optional, default is false
+          # Run the SRCCLR with the `--skip-collectors` options
+          #skip-collectors: # optional, default is false
+          # Run the SRCCLR with the `--allow-dirty` option
+          #allow-dirty: # optional, default is false
+          # Run the SRCCLR with the `--recursive` option
+          #recursive: # optional, default is false
+          # Run the SRCCLR with the `--skip-vms` option
+          #skip-vms: # optional, default is false
+    
