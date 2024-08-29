@@ -15,7 +15,7 @@
     <mysql.version>5.1.35</mysql.version>
   </properties>
   
-  <!-- Dependencies begin here -->
+  <!-- Dependencies begin there -->
   <dependencies>
  
     <dependency>
